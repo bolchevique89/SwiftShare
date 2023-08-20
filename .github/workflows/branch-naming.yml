@@ -1,0 +1,19 @@
+name: Validate Branch Naming Convention
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  branchNaming:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check branch naming
+        run: |
+          pattern="^feature/[A-Z]+-\d+-.*$"
+          if [[ ! "$GITHUB_REF" =~ $pattern ]]; then
+            echo "Invalid branch naming convention"
+            exit 1
+          fi
+
