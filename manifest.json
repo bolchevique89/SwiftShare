@@ -1,0 +1,10 @@
+{
+  "name": "SwiftShare",
+  "version": "1.0",
+  "description": "Extension to share files quickly with peers",
+  "browser_action:" {
+                      "default_icon": "",
+                      "default_popup": "",
+                    }
+}
+  
